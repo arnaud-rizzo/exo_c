@@ -13,7 +13,7 @@ int main(void){
 
     for (int i = 0; i <= nombre_choisi; i++)
     {
-        printf("la table de %d est :\n");
+        printf("la table de %d est :\n",i);
         for (int j = 0; j < 10; j++){
             printf("%d * %d = %d\n",j,i,j*i);
         }          
