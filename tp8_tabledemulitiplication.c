@@ -9,9 +9,9 @@ int main(void){
     int nombre_choisi=0;
 
     printf("choisir un entier : ");
-    scanf("%d",nombre_choisi);
+    scanf("%d",&nombre_choisi);
 
-    for (int i = 0; i < nombre_choisi; i++)
+    for (int i = 0; i <= nombre_choisi; i++)
     {
         printf("la table de %d est :\n");
         for (int j = 0; j < 10; j++){
