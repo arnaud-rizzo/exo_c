@@ -5,7 +5,7 @@
 
 //debut du programe
 int main(void){
-    
+    //variable
     int nombre_choisi=0;
 
     printf("choisir un entier : ");
@@ -20,9 +20,7 @@ int main(void){
         
         
     }
-    
-    
-
+ 
     return 0;//fini le programe et retourne que tous c'est bien passer
     
     
