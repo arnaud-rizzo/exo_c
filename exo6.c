@@ -53,6 +53,7 @@ int main(void){
             }
             
             printf("score  humain %d - ordi %d \n",sh,so);
+            break;
   
     }
 
