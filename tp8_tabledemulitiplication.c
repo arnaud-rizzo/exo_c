@@ -11,9 +11,14 @@ int main(void){
     printf("choisir un entier : ");
     scanf("%d",nombre_choisi);
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < nombre_choisi; i++)
     {
-        /* code */
+        printf("la table de %d est :\n");
+        for (int j = 0; j < 10; j++){
+            printf("%d * %d = %d\n",j,i,j*i);
+        }          
+        
+        
     }
     
     
