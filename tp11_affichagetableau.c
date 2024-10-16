@@ -15,7 +15,7 @@ int main(void){
     printf(" %d ",tableau[i]);
    }
    
-   printf("le nombre vaut : %d\n",nombre);
+   printf("\n");
 
     return 0; //fini le programe et retourne que tous c'est bien passer
     
