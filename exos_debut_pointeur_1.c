@@ -21,5 +21,4 @@ int main(void){
 
     return 0; //fini le programe et retourne que tous c'est bien passer
     
-    
 }
