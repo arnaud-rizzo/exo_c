@@ -10,14 +10,14 @@ int main(void){
    //variable
    int nombre;
    int *adress_du_nombre;
-   int **adressocepion;
+   //int **adressocepion;
     nombre =4;
     printf("le nombre vaut : %d\n",nombre);
 
     adress_du_nombre = &nombre;
 
     
-    adressocepion= &adress_du_nombre;
+    //adressocepion= &adress_du_nombre;
 
    // **adressocepion = 2;
 
