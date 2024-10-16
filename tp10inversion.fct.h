@@ -1,2 +1,2 @@
 
-int[] inversion(int nombre1, int nombre2);
+int [] inversion(int nombre1, int nombre2);
