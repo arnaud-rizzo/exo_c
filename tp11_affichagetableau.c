@@ -8,15 +8,13 @@
 //debut du programe
 int main(void){
    //variable
-   int nombre;
-   int *adress_du_nombre;
-
-    nombre =4;
-
-    adress_du_nombre = &nombre;
-
-    *adress_du_nombre=2;
-
+   int tableau ={1,2,3,4,5};
+   
+   printf("tableau :");
+   for (int i=0;i<5;i++){
+    printf(" %d ",tableau[i]);
+   }
+   
    printf("le nombre vaut : %d\n",nombre);
 
     return 0; //fini le programe et retourne que tous c'est bien passer
