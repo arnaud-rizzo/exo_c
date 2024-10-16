@@ -8,12 +8,16 @@
 //debut du programe
 int main(void){
    //variable
-    int var=18;
+    //variable
+    int var=27;
     int *adress=&var;
 
 
 
-    printf("var = %d\n*adresse = %d\n",var,*adress);
+
+    printf("adresse de var = %d\n",adress);
+    adress++;
+    printf("adresse suivant celle de var = %d\n",adress);
 
     return 0; //fini le programe et retourne que tous c'est bien passer
     
