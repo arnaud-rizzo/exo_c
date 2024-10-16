@@ -12,7 +12,7 @@ int main(void){
    int *adress_du_nombre;
    //int **adressocepion;
     nombre =4;
-    printf("le nombre vaut : %d\n",nombre);
+   // printf("le nombre vaut : %d\n",nombre);
 
     adress_du_nombre = &nombre;
 
