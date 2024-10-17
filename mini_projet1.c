@@ -29,22 +29,7 @@ int est_present(char* a_chercher){
     printf("a chercher :%s\n",a_chercher );
     while (tab_nom[i]!=FIN_TABLEAU)     
     {
-        //retourne l'index ou -1 si non present
-int est_present(char* a_chercher){
-    int i=0;
-
-    printf("a chercher :%s\n",a_chercher );
-    while (tab_nom[i]!=FIN_TABLEAU)     
-    {
-        printf("test i : %d,\n",i);
-        printf("test : %s,\n",tab_nom[i]);
-        printf("test : %s,\n",a_chercher);
-        if (strcmp(tab_nom[i],a_chercher)) return i; 
-        i++;
-    }
-    return -1;
-
-}
+        
         if (strcmp(tab_nom[i],a_chercher)) return i; 
         i++;
     }
