@@ -25,13 +25,15 @@ int taille_de(char** tab){
 //retourne l'index ou -1 si non present
 int est_present(char* a_chercher){
     int i=0;
-
-    printf("a chercher :%s\n",a_chercher );
-    while (tab_nom[i]!=FIN_TABLEAU)     
+    
+    if (tab_nom[0]==FIN_TABLEAU)       return -1;
+    
+    while (tab_nom[i]!=FIN_TABLEAU)   
     {
-        
-        if (strcmp(tab_nom[i],a_chercher)) return i; 
+       
+        if (strcmp(tab_nom[i], a_chercher) == 0) return i; 
         i++;
+       
     }
     return -1;
 
@@ -64,11 +66,12 @@ void ajout(){
     //entrer du nom
     printf("entrer le nom : ");
     scanf("%s",temp);
-    if (est_present(temp)) {
+   
+    if (est_present(temp)>=0) {
         printf("erreur il est deja dans la base\n");
         return;
     }
-  
+ 
     tab_nom[taille_tableau]=malloc(strlen(temp) + 1);
     strcpy(tab_nom[taille_tableau], temp);
     tab_nom[taille_tableau+1]=FIN_TABLEAU;
@@ -99,16 +102,38 @@ void ajout(){
                 tab_tel[taille_tableau]=tel;
                 tab_tel[taille_tableau+1]=FIN_TABLEAU;
                 */
-    
-    
 }
 
+//supression d'un element
+void supprime(){
+    //variable
+    char temp[99];
+    int taille_tableau = taille_de(tab_nom);
+    int position;
+    
+    //entrer du nom
+    printf("entrer le nom : ");
+    scanf("%s",temp);
+    position=est_present(temp);
+    if (position==-1) {
+        printf("erreur il n'est deja dans la base\n");
+        return;
+    }
+    for (int i=position;i<taille_tableau;i++){
+        printf("i  : %d\n",i);
+        tab_nom[i]=tab_nom[i+1];
+        tab_tel[i]=tab_tel[i+1];
+    }
+
+    printf("supression effectuer\n");
+
+}
 
 
 
 void recherche(char* a_chercher){
     int retour= est_present(a_chercher);
-    if(!retour) printf("il n'est pas dans la liste\n");
+    if(retour==-1) printf("il n'est pas dans la liste\n");
     else printf("%s a pour telephone : %s\n",tab_nom[retour],tab_tel[retour]);
 }
 
@@ -126,7 +151,7 @@ int main(void){
     tab_nom[0]="arnaud";
     tab_tel[0]="06 00 00 00 00";
     
-    printf("%s",tab_nom[0]);
+    
     tab_nom[1]=FIN_TABLEAU;
     tab_tel[1]=FIN_TABLEAU;
     
@@ -165,6 +190,9 @@ int main(void){
                 ajout();
                 break;
             //erreur
+            case '4':
+                supprime();
+                break;
             default:
                 printf("erreur retentere votre chance\n\n");
                 break;
