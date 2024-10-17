@@ -18,10 +18,10 @@ int main(void){
     printf("entrer une chaine : ");
     scanf("%s",chaine);
 
+    //calcul de longeur
     while (chaine[longueur]!='\0')  longueur++;
     
-
-
+    //affichage de la longeur
     printf("%d\n",longueur);
 
     return 0; //fini le programe et retourne que tous c'est bien passer
