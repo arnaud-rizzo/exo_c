@@ -53,7 +53,8 @@ int main(void){
     regtest = regcomp(&regex, FORMA_TEL, REG_EXTENDED);
     regtest = regexec(&regex, test, 0, NULL, 0);
     */
-    printf("reti vaut : %s",tab_nom[0]);
+
+    printf("reti vaut : %s",taille_de(tab_nom));
 
 
 
