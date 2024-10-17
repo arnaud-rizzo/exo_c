@@ -120,7 +120,6 @@ void supprime(){
         return;
     }
     for (int i=position;i<taille_tableau;i++){
-        printf("i  : %d\n",i);
         tab_nom[i]=tab_nom[i+1];
         tab_tel[i]=tab_tel[i+1];
     }
