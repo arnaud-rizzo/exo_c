@@ -80,9 +80,7 @@ void ajout(){
         return;
     }
  
-    //nouveau=malloc(sizeof(Persone));
     strcpy(tab[taille_tableau].nom, temp);
-    //tab[taille_tableau+1]=*nouveau;
     strcpy(tab[taille_tableau+1].nom,FIN_TABLEAU);
     
     //entrer du tel
