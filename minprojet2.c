@@ -7,8 +7,9 @@
 typedef struct persone
 {
     char nom[100];
-    int age;
-    float taille;
+    char tel[20];
+    struct persone *suivant;    
+
 }Persone;
 
 
