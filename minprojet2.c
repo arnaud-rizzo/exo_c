@@ -70,10 +70,7 @@ void ajout(){
     char temp[100];
     int taille_tableau = taille_du_tableau();
     struct persone *nouveau;
-    
-    
-
-
+  
     //entrer du nom
     printf("entrer le nom : ");
     scanf("%s",&temp);
@@ -87,12 +84,10 @@ void ajout(){
     strcpy(tab[taille_tableau].nom, temp);
     //tab[taille_tableau+1]=*nouveau;
     strcpy(tab[taille_tableau+1].nom,FIN_TABLEAU);
-
     
     //entrer du tel
     printf("entrer le numero de tel : ");
     scanf("%s",&temp);
-   
     strcpy(tab[taille_tableau].tel, temp);
     
     
@@ -115,6 +110,7 @@ void supprime(){
         printf("erreur il n'est deja dans la base\n");
         return;
     }
+    //supression
     for (int i=position;i<taille_tableau;i++){
         strcpy(tab[i].nom,tab[i+1].nom);
         strcpy(tab[i].tel,tab[i+1].tel);
@@ -138,10 +134,7 @@ int main(void){
     char choix_menu='0';
     char a[100]; //personne a chercher
    
-    //scanf("%s",test);
-    //printf("%s\n", test);
-    //printf("reti vaut : %d",taille_de(tab_nom));
-    //initialisation tableau
+  
     
     strcpy(tab[0].nom,"arnaud");
     strcpy(tab[0].tel,"06 00 00 00 00");
@@ -191,26 +184,6 @@ int main(void){
                 break;
         }
     }
-    
-    
-
-
-
-    
-    /*
-    int regtest;
-    char *test = "06 20 17 02 24";
-    
-    regex_t regex;
-    regtest = regcomp(&regex, FORMA_TEL, REG_EXTENDED);
-    regtest = regexec(&regex, test, 0, NULL, 0);
-    */
-
-    
-
-
-
-
     return 0; 
     
 }
